@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+body {
+    line-height: 1.6;
+    background: rgb(127, 197, 255);
+}
+header {
+    background: rgb(43, 46, 226);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background: rgb(0, 132, 255);
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: yellow;
+}
+.Box {
+    border: 1px dashed #ccc;
+    padding: 15px;
+    margin-top: 10px;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+}
+h2 {
+    margin-bottom: 10px;
+    color: black;
+}
+ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: green;
+    color: white;
+}
