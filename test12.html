@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering CSS Styling</title>
+    <link rel="stylesheet" href="test12.css">
+</head>
+<body>
+<header>
+    <h1>Mastering CSS Styling</h1>
+    <p>A Comprehensive Visual Reference Guide</p>
+</header>
+<div class="container">
+    <section>
+        <h2>1. Color Systems</h2>
+        <p>Colors can be defined using names, Hex codes, RGB, or HSL values.</p>
+        <div class="color-boxes">
+            <div class="box red">HEX (#e74c3c)</div>
+            <div class="box green">RGB (46, 204, 113)</div>
+            <div class="box blue">HSL (200, 100%, 50%)</div>
+            <div class="box dark">RGBA Transparency</div>
+        </div>
+    </section>
+    <section>
+        <h2>2. Backgrounds & Gradients</h2>
+        <div class="gradient-box">
+            Linear Gradient Background
+        </div>
+        <p class="note">Using linear-gradient(45deg, #ff6b6b, #feca57)</p>
+    </section>
+    <section>
+        <h2>3. Borders & Shapes</h2>
+        <div class="borders">
+            <div class="dashed">Dashed Border</div>
+            <div class="dotted">Dotted Border</div>
+            <div class="double">Double Border</div>
+            <div class="rounded">Rounded Corners</div>
+            <div class="pill">0</div>
+        </div>
+    </section>
+    <section>
+        <h2>4. Shadows & Hover Effects</h2>
+        <div class="card">
+            <h3>Box Shadow Card</h3>
+            <p>Hover over this card to see the shadow transition and lift effect.</p>
+            <button>Interactive Button</button>
+        </div>
+    </section>
+    <section>
+        <h2>5. Text & Typography</h2>
+        <p class="dropcap">
+            This paragraph uses the ::first-letter pseudo-element to create a "Drop Cap" effect.
+        </p>
+        <p class="smallcaps">
+            This text uses small-caps, spacing, and capitalization properties.
+        </p>
+        <input type="text" placeholder="This is a very long sentence tha...">
+    </section>
+    <section>
+        <h2>6. Structure (Lists & Tables)</h2>
+        <ul>
+            <li>Square Bullet Point 1</li>
+            <li>Square Bullet Point 2</li>
+            <li>Square Bullet Point 3</li>
+        </ul>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>border-collapse</td>
+                <td>Combines table borders into one.</td>
+            </tr>
+            <tr>
+                <td>nth-child</td>
+                <td>Styles specific rows (like zebra stripes).</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>7. Overflow Control</h2>
+        <div class="overflow-box">
+            <p>This is a scrollable container. Inside here is a lot of content that exceeds the 100px height limit set on the parent.</p>
+            <p>Line 2 of content...</p>
+            <p>Line 3 of content...</p>
+            <p>Line 4 of content...</p>
+        </div>
+    </section>
+</div>
+</body>
+</html>
