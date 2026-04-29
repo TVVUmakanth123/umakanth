@@ -1,0 +1,66 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    width: 150px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+.circle {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle img {
+    width: 80%;
+}
+.bg1 {
+    background: orange;
+}
+
+.bg2 {
+    background: whitesmoke;
+}
+
+.bg3 {
+    background: orange;
+}
+
+.bg4 {
+    background: whitesmoke;
+}
+
+h3 {
+    margin-top: 15px;
+    color: blue;
+}
+
+p {
+    font-size: 13px;
+    color: black;
+    margin: 10px 0;
+}
+span {
+    font-size: 12px;
+    color: black;
+}

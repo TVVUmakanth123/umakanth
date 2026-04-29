@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: white;
+}
+.navbar {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+.navbar h2 {
+    font-size: 20px;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.navbar ul li {
+    margin-left: 20px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.apply {
+    height: 500px;
+    background: linear-gradient(rgba(10,42,74,0.7), rgba(10,42,74,0.7)),
+                url('university.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.apply h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.apply p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.apply button {
+    background: orange;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.progress {
+    display: flex;
+    justify-content: space-around;
+    background: whitesmoke;
+    padding: 30px 0;
+    text-align: center;
+}
+.progress div h2 {
+    color: black;
+}
+.section {
+    padding: 50px;
+    text-align: center;
+}
+.section h2 {
+    margin-bottom: 30px;
+    color: black;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background: white;
+    width: 350px;
+    border-radius: 6px;
+    text-align: left;
+}
+.card-header {
+    height: 120px;
+}
+.engineering {
+    background: linear-gradient(orange, orange);
+}
+.Business {
+    background: linear-gradient(blue, skyblue);
+}
+.arts {
+    background: linear-gradient(green, aquamarine);
+}
+.card-body {
+    padding: 15px;
+}
+.card-body h3 {
+    margin-bottom: 10px;
+}
+.card-body p {
+    font-size: 13px;
+    color: black;
+}
+.card-body a {
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    font-size: 13px;
+    text-decoration: none;
+}
+.footer {
+    background: black;
+    color: white;
+    padding: 40px 50px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer h4 {
+    margin-bottom: 10px;
+}
+.footer p, .footer a {
+    font-size: 13px;
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top: 10px;
+    font-size: 12px;
+}
