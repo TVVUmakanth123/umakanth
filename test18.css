@@ -1,0 +1,49 @@
+body {
+    margin: 5%;
+    background: whitesmoke;
+    font-family: Arial;
+}
+.name {
+    text-align: center;
+    color: orangered;
+    margin: 20px;
+}
+.container {
+    width: 90%;
+    margin: 40px;
+    display: flex;
+    gap: 25px;
+}
+.section {
+    width: 25%;
+    background: black;
+    overflow: hidden;
+    transition: 1s;
+}
+.section img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    transition: 1s;
+}
+.content {
+    padding: 15px;
+    color: white;
+}
+.content h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+.content h3::first-letter{
+    color:orangered;
+}
+.content p {
+    font-size: 25px;
+    line-height: 30px;
+}
+.section:hover {
+    transform: translateX(10px);
+}
+.section:hover img {
+    transform: scale(1.5);
+}
