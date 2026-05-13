@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    width: 100%;
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    background: #fff;
+}
+
+.left-content {
+    width: 55%;
+}
+
+.left-content h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.left-content span {
+    color: #777;
+}
+
+.feature-box {
+    width: 500px;
+    height: 58px;
+    background: #ece8ee;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.feature-box p {
+    font-size: 20px;
+}
+
+.feature-box span {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #888;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+}
+
+.right-content {
+    width: 50%;
+    padding-top: 150px;
+}
+
+.right-content p {
+    font-size: 20px;
+    color: black;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end) infinite;
+}
+
+.apps-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-image1 {
+    width: 50%;
+    height: 100%;
+}
+
+.left-image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.right-content1 {
+    width: 50%;
+    height: 100vh;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+.right-content1 h1 {
+    width: 500px;
+    font-size: 55px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.app-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.app-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.arrow-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.watch-section {
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+
+.left-box1 {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.content1 p {
+    font-size: 30px;
+    line-height: 50px;
+    color: #111;
+    margin-bottom: 35px;
+}
+
+.right-box1 {
+    width: 50%;
+}
+
+.right-box1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-icons {
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.icon-box {
+    text-align: center;
+    color: white;
+}
+
+.icon-box img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+    transition: 0.4s;
+}
+
+.icon-box img:hover {
+    transform: scale(1.2);
+}
+
+.icon-box h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-section {
+    background: #fff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.cards {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1);
+}
+
+.text-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.text-content h1 {
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.text-content p {
+    font-size: 20px;
+    color: black;
+    line-height: 30px;
+    justify-content: center;
+}
+
+.watch-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: auto;
+}
+
+.watch-card {
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.watch-card:hover {
+    transform: translateY(-10px);
+}
+
+.watch-image {
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #fff;
+}
+
+.watch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.watch-image img {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.watch-content {
+    padding: 25px;
+    background: #fff;
+}
+
+.watch-content h3 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+.watch-card:hover {
+    background: black;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-hero {
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.footerhero-content {
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+    position: relative;
+    z-index: 5;
+    color: #fff;
+}
+
+.footerhero-content h1 {
+    font-size: 52px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.footerhero-content p {
+    max-width: 600px;
+    margin: auto;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.watch-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-note {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+
+footer {
+    width: 100%;
+    background: #ececec;
+    color: #111;
+    padding: 35px 7%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    font-size: 13px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-right span {
+    font-size: 13px;
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.copyright {
+    width: 100%;
+    background: #000;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 14px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
