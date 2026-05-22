@@ -1,0 +1,359 @@
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+#menu-toggle{
+    display:none;
+}
+
+.hamburger{
+    width:45px;
+    height:45px;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    cursor:pointer;
+    z-index:2000;
+}
+
+.hamburger span{
+    width:100%;
+    height:4px;
+    background:#fff;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media(max-width:1200px){
+
+    .hero{
+        padding:60px 40px;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:650px;
+    }
+
+    .hero h1{
+        font-size:72px;
+        line-height:82px;
+    }
+
+    .hero p{
+        font-size:20px;
+        line-height:32px;
+    }
+
+    .container{
+        padding:50px 4%;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    nav{
+        padding:18px 25px;
+    }
+
+    .hamburger{
+        display:flex;
+    }
+
+    .btn{
+        display:none;
+    }
+
+    .nav-menu{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#01263a;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:35px;
+        transition:0.5s;
+        z-index:1500;
+    }
+
+    #menu-toggle:checked ~ .nav-menu{
+        right:0;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(1){
+        transform:rotate(45deg) translate(7px,7px);
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(2){
+        opacity:0;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(3){
+        transform:rotate(-45deg) translate(7px,-7px);
+    }
+
+    .hero{
+        padding:60px 30px;
+        min-height:420px;
+    }
+
+    .hero h3{
+        font-size:22px;
+    }
+
+    .hero h1{
+        font-size:58px;
+        line-height:68px;
+    }
+
+    .hero p{
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .container{
+        grid-template-columns:1fr;
+        padding:45px 25px;
+    }
+
+    .form-box{
+        padding:35px 25px;
+    }
+
+    .side{
+        flex-direction:column;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr 1fr;
+        gap:35px;
+    }
+
+    footer{
+        padding:50px 30px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .logo{
+        font-size:30px;
+    }
+
+    .hero{
+        padding:50px 20px;
+        min-height:380px;
+    }
+
+    .hero h3{
+        font-size:18px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:52px;
+        margin-bottom:20px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:28px;
+    }
+
+    .input-group{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .full{
+        grid-column:1;
+    }
+
+    .form-box{
+        padding:30px 20px;
+    }
+
+    .section-title{
+        font-size:20px;
+        flex-wrap:wrap;
+    }
+
+    .section-title i{
+        width:40px;
+        height:40px;
+        font-size:16px;
+    }
+
+    .input-box input,
+    .input-box select,
+    textarea{
+        padding:14px;
+        font-size:14px;
+    }
+
+    .radio-group{
+        gap:18px;
+    }
+
+    .submit-btn{
+        font-size:17px;
+        padding:16px;
+    }
+
+    .card{
+        padding:25px 20px;
+    }
+
+    .card h2{
+        font-size:24px;
+    }
+
+    .detail{
+        gap:15px;
+    }
+
+    .detail i{
+        width:48px;
+        height:48px;
+        font-size:18px;
+    }
+
+    .detail h4{
+        font-size:17px;
+    }
+
+    .price{
+        font-size:50px;
+    }
+
+    .secure{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        padding:45px 20px;
+    }
+
+    .newsletter{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .newsletter input{
+        border-radius:8px;
+    }
+
+    .newsletter button{
+        border-radius:8px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero h1{
+        font-size:34px;
+        line-height:42px;
+    }
+
+    .hero p{
+        font-size:14px;
+        line-height:24px;
+    }
+
+    .container{
+        padding:35px 15px;
+    }
+
+    .form-box{
+        padding:25px 15px;
+        border-radius:15px;
+    }
+
+    .section-title{
+        font-size:17px;
+        gap:10px;
+    }
+
+    .radio-group{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .check{
+        align-items:flex-start;
+    }
+
+    .check p{
+        font-size:14px;
+    }
+
+    .submit-btn{
+        font-size:15px;
+    }
+
+    .card{
+        padding:20px 15px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    .detail{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .price{
+        font-size:40px;
+    }
+
+    footer{
+        padding:35px 15px;
+    }
+
+    .copy{
+        font-size:13px;
+    }
+}

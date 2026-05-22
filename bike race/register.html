@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Race Register Form</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="register1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            BIKE <span>RACE</span>
+        </div>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+        <a href="register.html" class="btn">REGISTER NOW</a>
+
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h3>JOIN THE CHALLENGE</h3>
+            <h1>REGISTER <span>NOW</span></h1>
+            <p>
+                Fill out the form below to secure your spot in the
+                most exciting bike race of the year.
+            </p>
+            <br>
+            <a href="#" class="btn">JOIN THE RACE</a>
+        </div>
+    </section>
+    <section class="container">
+        <div class="form-box">
+            <div class="section-title">
+                <i class="fa-solid fa-user"></i>
+                PERSONAL INFORMATION
+            </div>
+            <form>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label>Full Name *</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    <div class="input-box">
+                        <label>Date of Birth *</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-box">
+                        <label>Email Address *</label>
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+                    <div class="input-box">
+                        <label>Phone Number *</label>
+                        <input type="text" placeholder="Enter phone number">
+                    </div>
+                    <div class="input-box full">
+                        <label>Address *</label>
+                        <input type="text" placeholder="Enter complete address">
+                    </div>
+                    <div class="input-box">
+                        <label>City *</label>
+                        <input type="text" placeholder="Enter city">
+                    </div>
+                    <div class="input-box">
+                        <label>State *</label>
+                        <input type="text" placeholder="Enter state">
+                    </div>
+                    <div class="input-box">
+                        <label>Postal Code *</label>
+                        <input type="text" placeholder="Enter postal code">
+                    </div>
+                    <div class="input-box">
+                        <label>Country *</label>
+                        <select>
+                            <option>Select Country</option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section-title">
+                    <i class="fa-solid fa-flag-checkered"></i>
+                    RACE INFORMATION
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label>Select Category *</label>
+                        <select>
+                            <option>Choose Category</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label>T-Shirt Size *</label>
+                        <select>
+                            <option>Choose Size</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                    </div>
+                </div>
+                <label style="font-weight:bold;">Experience Level *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="race"> Beginner</label>
+                    <label><input type="radio" name="race"> Intermediate</label>
+                    <label><input type="radio" name="race"> Advanced</label>
+                    <label><input type="radio" name="race"> Professional</label>
+                </div>
+                <div style="margin-top:25px;">
+                    <label style="font-weight:bold;">
+                        Why are you joining this race?
+                    </label>
+                    <textarea placeholder="Tell us about your motivation..."></textarea>
+                </div>
+                <div class="section-title" style="margin-top:40px;">
+                    <i class="fa-solid fa-phone"></i>
+                    EMERGENCY CONTACT
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label>Full Name *</label>
+                        <input type="text" placeholder="Emergency contact name">
+                    </div>
+                    <div class="input-box">
+                        <label>Relationship *</label>
+                        <input type="text" placeholder="Relationship">
+                    </div>
+                    <div class="input-box full">
+                        <label>Phone Number *</label>
+                        <input type="text" placeholder="Enter contact number">
+                    </div>
+                </div>
+                <div class="check">
+                    <input type="checkbox">
+                    <p>
+                        I agree to the
+                        <a href="#">Terms & Conditions</a>
+                        and
+                        <a href="#">Privacy Policy</a>
+                    </p>
+                </div>
+                <button class="submit-btn">
+                    <a href="#popup">COMPLETE REGISTRATION <i class="fa-solid fa-arrow-right"></i></a>
+                </button>
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup-box">
+                <img src="success.jpeg" alt="success">
+                <a href="#" class="ok-btn">OK</a>
+            </div>
+        </div>
+        <div class="side">
+            <div class="card">
+                <h2>EVENT SUMMARY</h2>
+                <div class="detail">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <div>
+                        <h4>24 MAY 2026</h4>
+                        <p>Sunday</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>07:00 AM</h4>
+                        <p>Race Start</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Mountain Pass</h4>
+                        <p>Alpine Roads</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fa-solid fa-flag-checkered"></i>
+                    <div>
+                        <h4>120 KM</h4>
+                        <p>Total Distance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>REGISTRATION FEE</h2>
+                <div class="price">$79</div>
+                <p>
+                    Includes race kit, refreshments,
+                    medal and certificate.
+                </p>
+                <div class="secure">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <div>
+                        <h4>Secure Registration</h4>
+                        <p>Your details are safe with us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>BIKE RACE</h3>
+                <p>
+                    Pushing limits, breaking records,
+                    and inspiring the world of cycling.
+                </p>
+                <div class="social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div>
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Registration Info</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>NEWSLETTER</h3>
+                <p>
+                    Subscribe for latest updates and
+                    exclusive offers.
+                </p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Enter your email">
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            &copy; 2025 Bike Race. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+```

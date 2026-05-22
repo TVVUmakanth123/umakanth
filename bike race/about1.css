@@ -1,0 +1,445 @@
+/* =========================
+   LAPTOP DEVICES
+========================= */
+@media screen and (max-width: 1200px) {
+
+    .navbar {
+        padding: 20px 40px;
+    }
+
+    .hero-content {
+        padding: 160px 40px 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 65px;
+    }
+
+    .story {
+        padding: 60px 40px;
+    }
+
+    .story-section {
+        padding: 60px 40px;
+    }
+
+    .story-content h1 {
+        font-size: 55px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-content {
+        padding: 80px;
+    }
+}
+
+
+/* =========================
+   TABLET DEVICES
+========================= */
+@media screen and (max-width: 992px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .hero-content {
+        padding: 180px 30px 80px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .line {
+        margin: 20px auto;
+    }
+
+    .story {
+        padding: 50px 25px;
+    }
+
+    .story-container {
+        flex-direction: column;
+    }
+
+    .story-left,
+    .timeline {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .story-left h2 {
+        font-size: 40px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 25px;
+    }
+
+    .story-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 25px;
+    }
+
+    .story-content h1 {
+        font-size: 48px;
+    }
+
+    .story-content p {
+        margin: auto;
+    }
+
+    .values-section {
+        padding: 30px 25px;
+    }
+
+    .section-title h1 {
+        font-size: 36px;
+    }
+
+    .mission-box {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-content h1 {
+        font-size: 34px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .left-content {
+        padding: 30px;
+    }
+
+    .left-content h1 {
+        font-size: 34px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        padding: 50px 30px;
+    }
+}
+
+
+/* =========================
+   MOBILE DEVICES
+========================= */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 180px 20px 60px;
+    }
+
+    .small-title {
+        font-size: 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .story {
+        padding: 40px 20px;
+    }
+
+    .story-left h2 {
+        font-size: 30px;
+    }
+
+    .story-left p {
+        font-size: 15px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        top: 20px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-box h2 {
+        font-size: 40px;
+    }
+
+    .story-section {
+        padding: 40px 20px;
+    }
+
+    .story-content h5 {
+        font-size: 22px;
+    }
+
+    .story-content h1 {
+        font-size: 34px;
+    }
+
+    .story-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .story-image img {
+        max-width: 100%;
+    }
+
+    .values-section {
+        padding: 25px 20px;
+    }
+
+    .section-title h1 {
+        font-size: 28px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-content h1 {
+        font-size: 28px;
+    }
+
+    .mission-content p {
+        font-size: 15px;
+    }
+
+    .mission-list {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        height: auto;
+    }
+
+    .cta-content {
+        padding: 25px 20px;
+    }
+
+    .left-content {
+        padding: 20px;
+    }
+
+    .left-content span {
+        font-size: 16px;
+    }
+
+    .left-content h1 {
+        font-size: 26px;
+    }
+
+    .left-content p {
+        font-size: 15px;
+    }
+
+    .register-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+@media screen and (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .story-left h2 {
+        font-size: 24px;
+    }
+
+    .story-content h1 {
+        font-size: 26px;
+    }
+
+    .section-title h1 {
+        font-size: 24px;
+    }
+
+    .mission-content h1 {
+        font-size: 24px;
+    }
+
+    .left-content h1 {
+        font-size: 22px;
+    }
+
+    .card h1 {
+        font-size: 30px;
+    }
+
+    .stat-box h2 {
+        font-size: 32px;
+    }
+
+    .logo-box h1 {
+        font-size: 28px;
+    }
+
+    .btn,
+    .outline-btn,
+    .journey-btn,
+    .register-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+#menu-bar {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* =========================
+   TABLET & MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 25px 0;
+        display: none;
+    }
+
+    #menu-bar:checked~.menu {
+        display: flex;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .hero-content {
+        padding-top: 160px;
+    }
+}

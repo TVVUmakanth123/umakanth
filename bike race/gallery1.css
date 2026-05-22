@@ -1,0 +1,389 @@
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+#menu-bar{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media(max-width:1400px){
+
+    .hero-content h1{
+        font-size:82px;
+        line-height:85px;
+    }
+
+    .footer-content h1{
+        font-size:52px;
+    }
+
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media(max-width:1200px){
+
+    .navbar{
+        padding:35px;
+    }
+
+    .hero-content{
+        padding-left:40px;
+    }
+
+    .hero-content h1{
+        font-size:68px;
+        line-height:72px;
+    }
+
+    .hero-content p{
+        width:100%;
+    }
+
+    .team-container{
+        gap:20px;
+    }
+
+    .card{
+        width:48%;
+    }
+
+    .footer-bottom{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    .register-btn{
+        display:none;
+    }
+
+    .navbar{
+        padding:25px 30px;
+        height:auto;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#000;
+        overflow:hidden;
+        max-height:0;
+        transition:0.5s ease;
+    }
+
+    #menu-bar:checked ~ nav{
+        max-height:500px;
+        padding:25px 0;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        gap:22px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:150px;
+    }
+
+    .hero-content{
+        width:100%;
+        padding:40px 30px;
+    }
+
+    .hero-image{
+        width:100%;
+    }
+
+    .hero-image img{
+        width:70%;
+    }
+
+    .hero-content h1{
+        font-size:58px;
+        line-height:65px;
+    }
+
+    .hero-content p{
+        margin:auto;
+    }
+
+    .category-section{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .team-container{
+        justify-content:center;
+    }
+
+    .card{
+        width:48%;
+    }
+
+    .bottom-section{
+        flex-direction:column;
+    }
+
+    .bottom-left,
+    .bottom-right{
+        width:100%;
+    }
+
+    .stats-bar{
+        gap:25px;
+    }
+
+    .footer-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:35px;
+    }
+
+    .footer-content h1{
+        font-size:42px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero-content{
+        padding:20px;
+    }
+
+    .hero-content h1{
+        font-size:44px;
+        line-height:52px;
+        margin:15px 0;
+    }
+
+    .herosmall-title{
+        font-size:24px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+        line-height:28px;
+    }
+
+    .hero-image img{
+        width:90%;
+    }
+
+    .category-section{
+        width:92%;
+        padding:20px;
+    }
+
+    .category-box{
+        width:100%;
+        justify-content:center;
+    }
+
+    .gallery-section{
+        padding:30px 20px 60px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6{
+        height:280px;
+    }
+
+    .team-section{
+        padding:40px 20px;
+    }
+
+    .main-title{
+        font-size:34px;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .card img{
+        height:320px;
+    }
+
+    .bottom-right{
+        padding:35px 20px;
+    }
+
+    .bottom-right h1{
+        font-size:32px;
+    }
+
+    .bottom-right p{
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .section-header h1{
+        font-size:32px;
+    }
+
+    .album-card{
+        height:240px;
+    }
+
+    .footer-top{
+        padding:50px 20px;
+    }
+
+    .footer-content h1{
+        font-size:34px;
+    }
+
+    .footer-content p{
+        font-size:16px;
+    }
+
+    .register1-btn{
+        margin-left:0;
+    }
+
+    .footer-bottom{
+        grid-template-columns:1fr;
+        padding:50px 20px;
+    }
+
+    .newsletter-box{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .newsletter-box input,
+    .newsletter-box button{
+        width:100%;
+        border-radius:6px;
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:20px;
+    }
+
+    .menu-icon{
+        font-size:26px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+        line-height:42px;
+    }
+
+    .herosmall-title{
+        font-size:18px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+        line-height:25px;
+    }
+
+    .content h3{
+        font-size:22px;
+    }
+
+    .main-title{
+        font-size:28px;
+    }
+
+    .bottom-right h1{
+        font-size:26px;
+    }
+
+    .section-header h1{
+        font-size:26px;
+    }
+
+    .album-content h3{
+        font-size:24px;
+    }
+
+    .footer-content h1{
+        font-size:28px;
+    }
+
+    .footer-content p{
+        font-size:15px;
+    }
+
+    .register1-btn a{
+        padding:18px;
+        font-size:15px;
+    }
+
+}
