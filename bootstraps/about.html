@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                Skyline.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary rounded-pill px-4">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-dark text-white min-vh-100 d-flex align-items-center">
+        <div class="container pt-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="badge bg-primary px-3 py-2 mb-3">
+                        ABOUT US
+                    </span>
+                    <h1 class="display-3 fw-bold">
+                        We Create Solutions
+                        That Make a Difference
+                    </h1>
+                    <p class="lead my-4">
+                        We are a creative digital agency helping businesses
+                        grow with innovative websites, apps and modern
+                        digital experiences.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                        <button class="btn btn-primary btn-lg rounded-pill px-4">
+                            Our Story
+                        </button>
+                        <button class="btn btn-outline-light btn-lg rounded-pill px-4">
+                            <a class="nav-link" href="contact.html">ContactUs</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop"
+                        class="img-fluid rounded-4 shadow-lg" alt="office image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <p class="text-primary fw-bold text-uppercase">
+                        About Us
+                    </p>
+                    <h1 class="display-4 fw-bold">
+                        Building Digital Success Since 2016
+                    </h1>
+                    <p class="text-secondary mt-4 fs-5">
+                        We create modern websites and digital experiences
+                        that help businesses grow faster using Bootstrap
+                        components and responsive layouts.
+                    </p>
+                    <div class="d-flex gap-3 bg-white shadow-sm rounded-4 p-4 mt-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                            style="width:60px;height:60px;">
+                            <i class="bi bi-bullseye fs-3"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">
+                                Our Mission
+                            </h5>
+                            <p class="text-secondary mb-0">
+                                Deliver high quality digital products with modern UI design.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg mt-4 px-4">
+                        Learn More
+                    </button>
+                </div>
+                <div class="col-lg-7">
+                    <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active">
+                            </button>
+                            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1">
+                            </button>
+                            <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2">
+                            </button>
+                        </div>
+                        <div class="carousel-inner rounded-4 shadow">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                                    class="d-block w-100" style="height:500px; object-fit:cover;" alt="team">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+                                    class="d-block w-100" style="height:500px; object-fit:cover;" alt="office">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                                    class="d-block w-100" style="height:500px; object-fit:cover;" alt="meeting">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold">OUR ACHIEVEMENTS</h6>
+                <h1 class="fw-bold">Company Statistics</h1>
+                <p class="text-secondary">
+                    We provide high-quality digital solutions worldwide.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow h-100 text-center p-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width:70px; height:70px;">
+                            <i class="bi bi-people-fill fs-2"></i>
+                        </div>
+                        <h1 class="fw-bold">250+</h1>
+                        <h5 class="fw-semibold">Happy Clients</h5>
+                        <p class="text-secondary">
+                            Trusted by businesses around the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow h-100 text-center p-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width:70px; height:70px;">
+                            <i class="bi bi-briefcase-fill fs-2"></i>
+                        </div>
+                        <h1 class="fw-bold">650+</h1>
+                        <h5 class="fw-semibold">Projects Completed</h5>
+                        <p class="text-secondary">
+                            Successfully completed projects worldwide.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow h-100 text-center p-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width:70px; height:70px;">
+                            <i class="bi bi-person-workspace fs-2"></i>
+                        </div>
+                        <h1 class="fw-bold">50+</h1>
+                        <h5 class="fw-semibold">Team Members</h5>
+                        <p class="text-secondary">
+                            Skilled professionals delivering modern solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow h-100 text-center p-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
+                            style="width:70px; height:70px;">
+                            <i class="bi bi-trophy-fill fs-2"></i>
+                        </div>
+                        <h1 class="fw-bold">8+</h1>
+                        <h5 class="fw-semibold">Years Experience</h5>
+                        <p class="text-secondary">
+                            Delivering reliable services since 2016.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold">
+                    Our Journey
+                </h6>
+                <h2 class="fw-bold">
+                    Milestones That Shaped Us
+                </h2>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width:80px;height:80px;">
+                        <i class="bi bi-rocket-takeoff fs-2 text-white"></i>
+                    </div>
+                    <h4 class="fw-bold">2016</h4>
+                    <p class="small">
+                        Started with a small creative team and big dreams.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width:80px;height:80px;">
+                        <i class="bi bi-people fs-2 text-white"></i>
+                    </div>
+                    <h4 class="fw-bold">2017</h4>
+                    <p class="small">
+                        Expanded services and onboarded first clients.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width:80px;height:80px;">
+                        <i class="bi bi-building fs-2 text-white"></i>
+                    </div>
+                    <h4 class="fw-bold">2019</h4>
+                    <p class="small">
+                        Moved into a new office and grew the team.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width:80px;height:80px;">
+                        <i class="bi bi-globe fs-2 text-white"></i>
+                    </div>
+                    <h4 class="fw-bold">2021</h4>
+                    <p class="small">
+                        Reached clients across multiple countries.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width:80px;height:80px;">
+                        <i class="bi bi-award fs-2 text-white"></i>
+                    </div>
+                    <h4 class="fw-bold">2023</h4>
+                    <p class="small">
+                        Won digital innovation and design awards.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width:80px;height:80px;">
+                        <i class="bi bi-stars fs-2 text-white"></i>
+                    </div>
+                    <h4 class="fw-bold">2025</h4>
+                    <p class="small">
+                        Continuing to innovate and grow businesses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">
+                    Testimonials
+                </h6>
+                <h2 class="fw-bold display-5">
+                    What Our Clients Say
+                </h2>
+                <p class="text-secondary">
+                    Our clients love our modern website designs and services.
+                </p>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"> </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body text-center p-4">
+                                        <div class="text-warning fs-4 mb-3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-secondary">
+                                            Excellent service and responsive support team.
+                                            Highly recommended for modern websites.
+                                        </p>
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                            class="rounded-circle mb-3" width="80" height="80" alt="client">
+                                        <h5 class="fw-bold mb-1">
+                                            John Doe
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            CEO, TechSoft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body text-center p-4">
+                                        <div class="text-warning fs-4 mb-3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-secondary">
+                                            Professional design and excellent communication.
+                                            The website looks amazing.
+                                        </p>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                            class="rounded-circle mb-3" width="80" height="80" alt="client">
+                                        <h5 class="fw-bold mb-1">
+                                            Sarah Johnson
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            Marketing Head
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body text-center p-4">
+                                        <div class="text-warning fs-4 mb-3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-secondary">
+                                            Fast delivery and outstanding support.
+                                            Very satisfied with the final project.
+                                        </p>
+                                        <img src="https://randomuser.me/api/portraits/men/55.jpg"
+                                            class="rounded-circle mb-3" width="80" height="80" alt="client">
+                                        <h5 class="fw-bold mb-1">
+                                            Michael Lee
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            Founder, StartupX
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body text-center p-4">
+                                        <div class="text-warning fs-4 mb-3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-secondary">
+                                            Clean UI design and smooth user experience.
+                                            The project exceeded expectations.
+                                        </p>
+                                        <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                                            class="rounded-circle mb-3" width="80" height="80" alt="client">
+                                        <h5 class="fw-bold mb-1">
+                                            Emily Watson
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            UI Designer
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body text-center p-4">
+                                        <div class="text-warning fs-4 mb-3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-secondary">
+                                            Their SEO and marketing services improved
+                                            our business growth quickly.
+                                        </p>
+                                        <img src="https://randomuser.me/api/portraits/men/76.jpg"
+                                            class="rounded-circle mb-3" width="80" height="80" alt="client">
+                                        <h5 class="fw-bold mb-1">
+                                            David Miller
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            Business Owner
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body text-center p-4">
+                                        <div class="text-warning fs-4 mb-3">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <p class="text-secondary">
+                                            Amazing support team and modern responsive
+                                            website layout design.
+                                        </p>
+                                        <img src="https://randomuser.me/api/portraits/women/25.jpg"
+                                            class="rounded-circle mb-3" width="80" height="80" alt="client">
+                                        <h5 class="fw-bold mb-1">
+                                            Jessica Brown
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            Project Manager
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-primary rounded-circle p-3">
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-primary rounded-circle p-3">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="py-5 bg-light" id="blog">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold">BLOG</h6>
+                <h2 class="fw-bold">Latest Articles</h2>
+                <p class="text-muted">
+                    Explore our latest blogs and updates about web design,
+                    development, SEO, and marketing.
+                </p>
+            </div>
+            <div class="table-responsive shadow rounded">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>10 Web Design Trends in 2024</td>
+                            <td>Design</td>
+                            <td>Admin</td>
+                            <td>May 15, 2024</td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Read More
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>How to Improve Website Performance</td>
+                            <td>Development</td>
+                            <td>Admin</td>
+                            <td>May 10, 2024</td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Read More
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Digital Marketing Strategies That Work</td>
+                            <td>Marketing</td>
+                            <td>Admin</td>
+                            <td>May 05, 2024</td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Read More
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A Complete Guide to SEO in 2024</td>
+                            <td>SEO</td>
+                            <td>Admin</td>
+                            <td>Apr 28, 2024</td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Read More
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Why UI/UX Design is Important</td>
+                            <td>Design</td>
+                            <td>Admin</td>
+                            <td>Apr 20, 2024</td>
+                            <td>
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Read More
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h2 class="fw-bold text-primary">Skyline.</h2>
+                    <p class="mt-3">
+                        We are a creative digital agency helping brands grow online with
+                        modern websites and smart digital solutions.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-light text-decoration-none">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a href="#" class="text-light text-decoration-none">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                        <a href="#" class="text-light text-decoration-none">
+                            <i class="bi bi-linkedin fs-5"></i>
+                        </a>
+                        <a href="#" class="text-light text-decoration-none">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="services.html" class="text-light text-decoration-none">Services</a></li>
+                        <li><a href="portfolio.html" class="text-light text-decoration-none">Portfolio</a></li>
+                        <li><a href="Contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold">Services</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li>Web Design</li>
+                        <li>Web Development</li>
+                        <li>SEO Optimization</li>
+                        <li>UI/UX Design</li>
+                        <li>Digital Marketing</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold">Newsletter</h5>
+                    <p class="mt-3">
+                        Subscribe to get latest updates and offers.
+                    </p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control rounded-0" placeholder="Enter your email">
+                        <button class="btn btn-primary rounded-0">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center">
+                <p class="mb-0">
+                    &copy; 2026 Novus. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
