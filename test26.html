@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>kanth</h1>
+    <p id="demo">umakanth</p>
+    <script>
+
+        // variable
+        // var
+        // var n = 5;
+        // console.log(n);
+
+
+        // or
+
+        // var a=5;
+        // var b=25;
+        // var c=a+b;
+        // console.log(c);
+
+
+        // let
+        // let n=10;
+        // n=20;
+        // console.log(n);
+
+
+        // or
+
+        // let m=20;
+        // let n=30;
+        // console.log(m+n);
+
+        // const
+        // const n=100;
+        // n=200;
+        // console.log(n);
+
+
+        // Data types
+        // 1.Numbers:-
+        // var a=10;
+        // var b=10.8;
+        // var c="umakanth";
+        // var d='kanth';
+        // var e=true;
+        // var g=false;
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        // console.log(d);
+        // console.log(e);
+        // console.log(g);
+
+        let a = "Volvo XC60";
+        let b = 'Volvo XC60';
+        console.log(a + b);
+
+        let x = 5;
+        let y = 5;
+        let z = 6;
+        document.getElementById("demo").innerHTML = (x == y) + "<br>" + (x == z);
+
+
+        document.getElementById("demo").innerHTML = typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
+
+
+        document.getElementById("demo").innerHTML = typeof 0 + "<br>" + typeof 314 + "<br>" + typeof 3.14 + "<br>" + typeof (3) + "<br>" + typeof (3 + 4);
+
+
+        let car;
+        document.getElementById("demo").innerHTML = car + "<br>" + typeof car;
+
+
+        const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+        document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old." + person.eyeColor;
+
+
+        const id1 = Symbol("id");
+        const id2 = Symbol("id");
+        let result = (id1 === id2);
+        document.getElementById("demo").innerHTML = "The result is " + result;
+
+
+        document.getElementById("demo").innerHTML = "'John' is " + typeof "John" + "<br><br>" + "('John' + 'Doe') is " + typeof ("John" + "Doe") + "<br><br>" + "3.14 is " + typeof 3.14 + "<br><br>" + "33 is " + typeof 33 + "<br><br>" + "(33 + 66) is " + typeof (33 + 66) + "<br><br>" + "NaN is " + typeof NaN + "<br><br>" + "true is " + typeof true + "<br><br>" + "false is " + typeof false + "<br><br>" + "1234n is " + typeof 1234n + "<br><br>" + "Symbol() is " + typeof Symbol() + "<br><br>" + "x is " + typeof x;
+
+
+        let m = NaN;
+        document.getElementById("demo").innerHTML = typeof m;
+
+
+        let myNumber = 32;
+        document.getElementById("demo").innerHTML =
+            "Decimal 32 = " + "<br><br>" +
+            "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+            "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+            "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+            "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+            "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+            "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+            "Binary (base 2): " + myNumber.toString(2);
+
+
+        let n = 123;
+        let text = n.toString();
+        document.getElementById("demo").innerHTML = text + typeof text;
+    </script>
+
+</body>
+
+</html>
