@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>data types</h1>
     <h2>strings</h2>
@@ -13,35 +15,35 @@
 
 
     <script>
-        let x='uma';
-        let y='kanth';
+        let x = 'uma';
+        let y = 'kanth';
 
-        document.getElementById("demo").innerHTML = x+y;
+        document.getElementById("demo").innerHTML = x + y;
 
-        var a=10, b=5;
+        var a = 10, b = 5;
 
         //Arithematical
-        console.log(a+b);
-        console.log(a-b);
-        console.log(a*b);
-        console.log(a/b);
-        console.log(a%b);
-        
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+
         //Assignment
-        a+=b;
+        a += b;
         console.log(a);
-        a-=b;
+        a -= b;
         console.log(a);
-        a*=b;
+        a *= b;
         console.log(a);
-        a/=b;
+        a /= b;
         console.log(a);
-        a%=b;
+        a %= b;
         console.log(a);
-        
+
 
         //increment/decrement
-        let m=10;
+        let m = 10;
         console.log(m);
         m++;
         console.log(m);
@@ -50,31 +52,75 @@
 
 
         //Relational
-        console.log(a==b);
-        console.log(a!=b);
-        console.log(a<b);
-        console.log(a>b);
-        console.log(a<=b);
-        console.log(a>=b);
+        console.log(a == b);
+        console.log(a != b);
+        console.log(a < b);
+        console.log(a > b);
+        console.log(a <= b);
+        console.log(a >= b);
 
 
         //Logical
-        c=6;
-        console.log(a<b&&b<c);
-        console.log(a<b||b<c);
-        console.log(!b<c);
+        c = 6;
+        console.log(a < b && b < c);
+        console.log(a < b || b < c);
+        console.log(!b < c);
 
 
         //concatenation
-        var d='uma';
-        var e='kanth';
+        var d = 'uma';
+        var e = 'kanth';
 
         console.log(a);
         console.log(b);
-        console.log(a+b);
-        console.log(d+e);
-        console.log(b+e);
-        console.log(e+b);
+        console.log(a + b);
+        console.log(d + e);
+        console.log(b + e);
+        console.log(e + b);
+
+
+        //bitwise operator
+        var f = 5 & 1;
+        console.log(f);
+
+
+        //Ternary operator
+        var age = 18;
+        var status = age >= 18 ? "Adult" : "Minor";
+        console.log(status);
+
+
+        //comma operator
+        let n1, n2
+        var res = (n1 = 1, n2 = 2, n1 + n2);
+        console.log(res);
+
+
+        //unary operators
+        let n = 5;
+        console.log(+n);
+        console.log(-n);
+        console.log(++n);
+        console.log(--n);
+        console.log(!n);
+
+
+        //BigInt Operators
+        let big1 = 123456789012345678901234567890n;
+        let big2 = 987654321098765432109876543210n;
+        console.log(big1 + big2);
+
+
+        //string operator
+        let s = "Hello" + " " + "World";
+        console.log(s);
+
+
+        //Chaining Operator
+        let obj = { name: "Aman", address: { city: "Delhi" } };
+        console.log(obj.address?.city);
+        console.log(obj.contact?.phone);
     </script>
 </body>
+
 </html>
