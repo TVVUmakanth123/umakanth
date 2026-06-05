@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test31.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Student Marks Calculator</h2>
+    <form>
+        <label>English :- <input type="number" id="m1"> </label>
+        <label>Telugu :- <input type="number" id="m2"> </label>
+        <label>Maths :- <input type="number" id="m3"> </label>
+        <label>Science :- <input type="number" id="m4"> </label>
+        <label>Social :- <input type="number" id="m5"> </label>
+    </form>
+    <button id="btn">Calculate</button>
+    <h3 id="result"></h3>
+    </div>
+
+    <script>
+        document.getElementById("btn").onclick = () => {
+            let m1 = Number(document.getElementById("m1").value);
+            let m2 = Number(document.getElementById("m2").value);
+            let m3 = Number(document.getElementById("m3").value);
+            let m4 = Number(document.getElementById("m4").value);
+            let m5 = Number(document.getElementById("m5").value);
+            const total = m1 + m2 + m3 + m4 + m5;
+            const percentage = total / 5;
+            const grade =
+                percentage >= 90 ? "A+" :
+                percentage >= 80 ? "A" :
+                percentage >= 70 ? "B" :
+                percentage >= 60 ? "C" :
+                percentage >= 50 ? "D" :
+                "F";
+            const status = percentage >= 40 ? 'PASS' : 'FAIL';
+            document.getElementById("result").innerHTML =
+                "Total Marks: " + total +
+                "<br>Percentage: " + percentage + "%" +
+                "<br>Grade: " + grade +
+                "<br>Status: " + status;
+        };
+    </script>
+</body>
+</html>
