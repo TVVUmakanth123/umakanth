@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            { name: "Ravi", marks: 90 },
+            { name: "Priya", marks: 75 },
+            { name: "Rahul", marks: 40 },
+            { name: "Anu", marks: 95 }
+        ];
+        console.log(students);
+
+        // 25. Create an array containing only student names
+        const studentNames = students.map(student => student.name);
+        console.log("Student Names:", studentNames);
+
+
+
+
+
+        // 26. Create an array containing only student marks
+        const studentMarks = students.map(student => student.marks);
+        console.log("Student Marks:", studentMarks);
+
+
+
+
+
+        // 27. Add 5 marks to every student
+        const updatedMarks = students.map(student => student.marks + 5);
+        console.log("Students with +5 Marks:", updatedMarks);
+
+
+
+
+
+        // 28. Get students who scored above 80
+        const above80 = students.filter(student => student.marks > 80);
+        console.log("Students Above 80:", above80);
+
+
+
+
+
+        // 29. Get students who scored below 50
+        const below50 = students.filter(student => student.marks < 50);
+        console.log("Students Below 50:", below50);
+
+
+
+
+
+        // 30. Find the student named "Rahul"
+        const rahul = students.find(student => student.name === "Rahul");
+        console.log("Rahul:", rahul);
+
+
+
+
+
+        // 31. Find the first student who scored above 90
+        const above90 = students.find(student => student.marks > 90);
+        console.log("First Student Above 90:", above90);
+
+
+
+
+
+        // 32. Calculate the total marks of all students
+        let totalMarks = 0;
+        students.forEach(student => { totalMarks += student.marks; });
+        console.log("Total Marks:", totalMarks);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const movies = [
+            { id: 1, title: "Bahubali", rating: 9 },
+            { id: 2, title: "Pushpa", rating: 8 },
+            { id: 3, title: "RRR", rating: 10 },
+            { id: 4, title: "Salaar", rating: 7 }
+        ];
+        console.log(movies);
+
+        // 1. Movie Titles
+        let titles = [];
+        for (let movie of movies) {
+            titles.push(movie.title);
+        }
+        console.log("Titles:", titles);
+
+        // 2. Movie Ratings
+        let ratings = [];
+        for (let movie of movies) {
+            ratings.push(movie.rating);
+        }
+        console.log("Ratings:", ratings);
+
+        // 3. Increase Every Rating by 1
+        let updatedMovies = [];
+        for (let movie of movies) {
+            updatedMovies.push({
+                id: movie.id,
+                title: movie.title,
+                rating: movie.rating + 1
+            });
+        }
+        console.log("Updated Ratings:", updatedMovies);
+
+        // 4. Movies with Rating Greater Than 8
+        let greaterThan8 = [];
+        for (let movie of movies) {
+            if (movie.rating > 8) {
+                greaterThan8.push(movie);
+            }
+        }
+        console.log("Rating > 8:", greaterThan8);
+
+        // 5. Movies with Rating Less Than 9
+        let lessThan9 = [];
+        for (let movie of movies) {
+            if (movie.rating < 9) {
+                lessThan9.push(movie);
+            }
+        }
+        console.log("Rating < 9:", lessThan9);
+
+        // 6. Find Movie with ID 3
+        let movieId3;
+        for (let movie of movies) {
+            if (movie.id === 3) {
+                movieId3 = movie;
+                break;
+            }
+        }
+        console.log("Movie ID 3:", movieId3);
+
+        // 7. Find Movie with Title "Pushpa"
+        let pushpaMovie;
+        for (let movie of movies) {
+            if (movie.title === "Pushpa") {
+                pushpaMovie = movie;
+                break;
+            }
+        }
+        console.log("Pushpa Movie:", pushpaMovie);
+
+        // 8. Total of All Ratings
+        let totalRating = 0;
+        for (let movie of movies) {
+            totalRating += movie.rating;
+        }
+        console.log("Total Rating:", totalRating);
+    </script>
+</body>
+
+</html>

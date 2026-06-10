@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const foodOrders = [
+            { item: "Pizza", price: 300 },
+            { item: "Burger", price: 150 },
+            { item: "Biryani", price: 250 },
+            { item: "Ice Cream", price: 100 }
+        ];
+        console.log(foodOrders);
+
+        // 33. Create an array containing only food item names
+        const foodNames = foodOrders.map(food => food.item);
+        console.log("Food Names:", foodNames);
+
+
+
+
+
+        // 34. Create an array containing only food prices
+        const foodPrices = foodOrders.map(food => food.price);
+        console.log("Food Prices:", foodPrices);
+
+
+
+
+
+        // 35. Increase every food price by ₹50
+        const increasedPrices = foodOrders.map(food => food.price + 50);
+        console.log("Increased Prices:", increasedPrices);
+
+
+
+
+
+        // 36. Get all food items costing more than ₹200
+        const above200 = foodOrders.filter(food => food.price > 200);
+        console.log("Costing More Than ₹200:", above200);
+
+
+
+
+
+        // 37. Get all food items costing less than ₹250
+        const below250 = foodOrders.filter(food => food.price < 250);
+        console.log("Costing Less Than ₹250:", below250);
+
+
+
+
+
+        // 38. Find the food item "Biryani"
+        const biryani = foodOrders.find(food => food.item === "Biryani");
+        console.log("Biryani:", biryani);
+
+
+
+
+
+        // 39. Find the first food item costing more than ₹250
+        const firstAbove250 = foodOrders.find(food => food.price > 250);
+        console.log("First Item Costing More Than ₹250:", firstAbove250);
+
+
+
+
+
+        // 40. Calculate the total food bill
+        let totalBill = 0;
+        for (let food of foodOrders) {
+            totalBill += food.price;
+        }
+        console.log("Total Food Bill: " + totalBill);
+    </script>
+</body>
+
+</html>

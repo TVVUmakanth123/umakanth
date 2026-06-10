@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const products = [
+            { id: 1, name: "Laptop", price: 50000 },
+            { id: 2, name: "Mouse", price: 500 },
+            { id: 3, name: "Keyboard", price: 1500 },
+            { id: 4, name: "Monitor", price: 12000 }
+        ];
+
+        // 9. Create an array containing only product names
+        const Names = products.map(product => product.name);
+        console.log("Product Names:", Names);
+
+
+
+
+        // 10. Create an array containing only product prices
+        const Prices = products.map(product => product.price);
+        console.log("Product Prices:", Prices);
+
+
+
+
+        // 11. Increase every product price by ₹1000
+        const increased = products.map(product => product.price + 1000 );
+        console.log("Prices Increased by ₹1000:", increased);
+
+
+
+
+
+        // 12. Get all products costing more than ₹1000
+        const Above1000 = products.filter(product => product.price > 1000);
+        console.log("Products Costing More Than ₹1000:", Above1000);
+
+
+
+
+
+        // 13. Get all products costing less than ₹10000
+        const Below10000 = products.filter(product => product.price < 10000);
+        console.log("Products Costing Less Than ₹10000:", Below10000);
+
+
+
+
+
+
+        // 14. Find the product with ID 2
+        const WithId2 = products.find(product => product.id === 2);
+        console.log("Product with ID 2:", WithId2);
+
+
+
+
+
+        // 15. Find the product named "Monitor"
+        const monitor = products.find(product => product.name === "Monitor");
+        console.log("Monitor Product:", monitor);
+
+
+
+        
+
+        // 16. Calculate the total cost of all products
+        const totalCost = products.reduce((total, product) => total + product.price, 0);
+        console.log("Total Cost of All Products:", totalCost);
+    </script>
+</body>
+
+</html>
