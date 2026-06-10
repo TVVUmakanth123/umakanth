@@ -17,75 +17,65 @@
         ];
         console.log(movies);
 
-        // 1. Movie Titles
-        let titles = [];
-        for (let movie of movies) {
-            titles.push(movie.title);
-        }
-        console.log("Titles:", titles);
+        // 1. Create a new array containing only movie titles
+        const movieTitles = movies.map(movie => movie.title);
+        console.log("Movie Titles:", movieTitles);
 
-        // 2. Movie Ratings
-        let ratings = [];
-        for (let movie of movies) {
-            ratings.push(movie.rating);
-        }
-        console.log("Ratings:", ratings);
 
-        // 3. Increase Every Rating by 1
-        let updatedMovies = [];
-        for (let movie of movies) {
-            updatedMovies.push({
-                id: movie.id,
-                title: movie.title,
-                rating: movie.rating + 1
-            });
-        }
-        console.log("Updated Ratings:", updatedMovies);
 
-        // 4. Movies with Rating Greater Than 8
-        let greaterThan8 = [];
-        for (let movie of movies) {
-            if (movie.rating > 8) {
-                greaterThan8.push(movie);
-            }
-        }
-        console.log("Rating > 8:", greaterThan8);
 
-        // 5. Movies with Rating Less Than 9
-        let lessThan9 = [];
-        for (let movie of movies) {
-            if (movie.rating < 9) {
-                lessThan9.push(movie);
-            }
-        }
-        console.log("Rating < 9:", lessThan9);
 
-        // 6. Find Movie with ID 3
-        let movieId3;
-        for (let movie of movies) {
-            if (movie.id === 3) {
-                movieId3 = movie;
-                break;
-            }
-        }
-        console.log("Movie ID 3:", movieId3);
+        // 2. Create a new array containing only movie ratings
+        const movieRatings = movies.map(movie => movie.rating);
+        console.log("Movie Ratings:", movieRatings);
 
-        // 7. Find Movie with Title "Pushpa"
-        let pushpaMovie;
-        for (let movie of movies) {
-            if (movie.title === "Pushpa") {
-                pushpaMovie = movie;
-                break;
-            }
-        }
-        console.log("Pushpa Movie:", pushpaMovie);
 
-        // 8. Total of All Ratings
-        let totalRating = 0;
-        for (let movie of movies) {
-            totalRating += movie.rating;
-        }
-        console.log("Total Rating:", totalRating);
+
+
+
+        // 3. Increase every movie rating by 1
+        const increasedRatings = movies.map(movie =>  movie.rating + 1);
+        console.log("Increased Ratings:", increasedRatings);
+
+
+
+
+
+        // 4. Get all movies with rating greater than 8
+        const ratingGreaterThan8 = movies.filter(movie => movie.rating > 8);
+        console.log("Movies with Rating > 8:", ratingGreaterThan8);
+
+
+
+
+
+        // 5. Get all movies with rating less than 9
+        const ratingLessThan9 = movies.filter(movie => movie.rating < 9);
+        console.log("Movies with Rating < 9:", ratingLessThan9);
+
+
+
+
+
+        // 6. Find the movie with ID 3
+        const movieById = movies.find(movie => movie.id === 3);
+        console.log("Movie with ID 3:", movieById);
+
+
+
+
+
+        // 7. Find the movie with title "Pushpa"
+        const movieByTitle = movies.find(movie => movie.title === "Pushpa");
+        console.log('Movie with Title "Pushpa":', movieByTitle);
+
+
+
+
+
+        // 8. Calculate the total of all movie ratings
+        const totalRatings = movies.reduce((total, movie) => total + movie.rating, 0);
+        console.log("Total Ratings: " + totalRatings);
     </script>
 </body>
 
