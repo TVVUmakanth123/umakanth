@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const movies = ["Avatar", "Titanic", "Inception", "Joker", "Interstellar"];
+        console.log(movies);
+
+        //41.Create an array of movie titles in uppercase
+        const upperCaseMovies = movies.map(movie => movie.toUpperCase());
+        console.log(upperCaseMovies);
+
+
+
+
+        const products = ["LAPTOP", "MOBILE", "HEADPHONES", "SMART WATCH", "CAMERA"];
+        console.log(products);
+        //42. Convert all product names to lowercase
+        const lowercaseProducts = products.map(product => product.toLowerCase());
+        console.log(lowercaseProducts);
+
+
+
+
+
+        const students = ["RAVI", "KANTH", "RAHUL", "SITA", "RAMESH", "PRIYA"];
+        console.log(students);
+        //43. Get students whose names start with "R"
+        const studentsWithR = students.filter(student => student.startsWith("R"));
+        console.log(studentsWithR);
+
+
+
+
+
+        const movie = ["Avatar", "Jawan", "Inception", "Leo", "Bahubali", "RRR", "Interstellar", "Pushpa"];
+        console.log(movie)
+        //44. Get movies whose title length is greater than 5
+        const longTitleMovie = movie.filter(movie => movie.length > 5);
+        console.log(longTitleMovie);
+
+
+
+
+
+        //45. Cricket scores
+        const cricketScores = [120, 85, 95, 110, 140];
+        console.log(cricketScores);
+        // Total cricket scores
+        const cricketTotal = cricketScores.reduce((sum, score) => sum + score, 0);
+        // Student marks
+        const studentMarks = [78, 85, 92, 88, 75];
+        console.log(studentMarks);
+        // Total student marks
+        const marksTotal = studentMarks.reduce((sum, mark) => sum + mark, 0);
+        // Combined total
+        const combinedTotal = cricketTotal + marksTotal;
+        console.log("Total Cricket Scores:", cricketTotal);
+        console.log("Total Student Marks:", marksTotal);
+        console.log("Combined Total:", combinedTotal);
+
+
+
+
+
+        //46. Find the most expensive product.
+        const product = [
+            { name: "Laptop", price: 50000 },
+            { name: "Mobile", price: 30000 },
+            { name: "TV", price: 45000 }
+        ];
+        const expensiveProduct = product.reduce((max, product) => product.price > max.price ? product : max);
+        console.log(expensiveProduct);
+
+
+
+
+
+        //47. Find the highest cricket score.
+        const cricketScore = [275, 342, 198, 410, 365];
+        const highestScore = Math.max(...cricketScore);
+        console.log("Highest Cricket Score:", highestScore);
+
+
+
+
+
+        //48. Find the student with the highest marks.
+        const student = [
+            { name: "Ravi", marks: 85 },
+            { name: "Sita", marks: 92 },
+            { name: "Arjun", marks: 78 },
+            { name: "Kanth", marks: 95 }
+        ];
+        const highest = student.reduce((max, student) => student.marks > max.marks ? student : max);
+        console.log(highest);
+
+
+
+
+
+        //49. Find the movie with the highest rating.
+        const films = [
+            { title: "RRR", rating: 8.9 },
+            { title: "Baahubali", rating: 8.2 },
+            { title: "Pushpa", rating: 7.8 },
+            { title: "Salaar", rating: 8.7 }
+        ];
+        const highestRatedMovie = films.reduce((max, movie) => movie.rating > max.rating ? movie : max);
+        console.log(highestRatedMovie);
+
+
+
+
+
+        //50. Create your own dataset and write 5 custom operations on it.
+        const employees = [
+            { id: 1, name: "Ravi", salary: 300000, department: "HR" },
+            { id: 2, name: "Kanth", salary: 450000, department: "IT" },
+            { id: 3, name: "Arun", salary: 500000, department: "Finance" },
+            { id: 4, name: "Sneha", salary: 400000, department: "IT" },
+            { id: 5, name: "Kiran", salary: 350000, department: "HR" }
+        ];
+
+        // 1. Get all employee names
+        const names = employees.map(emp => emp.name);
+        console.log("Names:", names);
+
+        // 2. Get employees from IT department
+        const itEmployees = employees.filter(emp => emp.department === "IT");
+        console.log("IT Employees:", itEmployees);
+
+        // 3. Increase salary by 50000
+        const updatedSalaries = employees.map(emp => emp.salary + 50000);
+        console.log("Updated Salaries:", updatedSalaries);
+
+        // 4. Find employee with highest salary
+        const highestSalary = employees.reduce((max, emp) => emp.salary > max.salary ? emp : max );
+        console.log("Highest Salary Employee:", highestSalary);
+
+        // 5. Calculate total salary of all employees
+        const totalSalary = employees.reduce((sum, emp) => sum + emp.salary, 0);
+        console.log("Total Salary:", totalSalary);
+    </script>
+</body>
+
+</html>

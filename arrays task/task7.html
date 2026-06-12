@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. slice()
+        let a = "JavaScript";
+        console.log(a.slice(0, 5));
+
+        var b = "Developer";
+        console.log(b.slice(-4));
+
+        const c = "Kanth is a developer";
+        console.log(c.slice(0, 14));
+
+
+
+
+
+        //2. SubString()
+        let sentence = "JavaScript is easy";
+        console.log("firstWord:-" + sentence.substring(0, 10));
+
+        var name = "Umakanth";
+        console.log("Lastword:- " + name.substring(3));
+
+        const city = "Proddatur";
+        console.log("firstword:- " + city.substring(0, 4));
+
+
+
+
+
+        //3. Substr()
+        let sub = "JavaScript";
+        console.log("Subject:- " + sub.substr(4, 6));
+
+        var citys = "Hyderabad";
+        console.log("Short Name:- " + citys.substr(0, 3));
+
+        const mobile = "9876543210";
+        console.log(mobile.substr(0, 3));
+
+
+
+
+
+        //4. Replace()
+        let fruit = "I like Apple";
+        console.log(fruit.replace("Apple", "Mango"));
+
+        var names = "Hello Ram";
+        console.log(names.replace('Ram', 'Kanth'));
+
+        const num = "My lucky number is 7";
+        console.log(num.replace('7', '9'));
+
+
+
+
+
+        //5. ReplaceAll()
+        let message = "Ravi is a developer. Ravi likes coding.";
+        console.log(message.replaceAll("Ravi", "UmaKanth"));
+
+        var messages = "JavaScript is easy. JavaScript is powerful. JavaScript is popular.";
+        console.log(messages.replaceAll("JavaScript", "JS"));
+
+        const sentences = "I like apples. apples are tasty. Apples are healthy.";
+        console.log(sentences.replaceAll("apples", "mangoes"));
+
+
+
+
+
+        //6. toUppercase()
+        let course = "javascript";
+        console.log(course.toUpperCase());
+
+        var movie = "pushpa";
+        console.log("Movie Name:", movie.toUpperCase());
+
+        const town = "vijayawada";
+        console.log("Town Name: ", town.toUpperCase());
+
+
+
+
+
+        //7. ToLowerCase()
+        let text = "HELLO JAVASCRIPT";
+        console.log("Lowercase String:", text.toLowerCase());
+
+        var para = "WELCOME TO THE TRAINING SESSION";
+        console.log(para.toLowerCase());
+
+        const film = "PUSHPA THE RULE";
+        console.log(film.toLowerCase());
+
+
+
+
+
+        //8. concat()
+        let stu = "Umakanth";
+        let cour = "JavaScript";
+        let mes = " is learning ";
+        console.log(stu.concat(mes, cour));
+
+        var first = "Uma";
+        var second = "Kanth";
+        console.log(first.concat(second));
+
+        const sity = "Kadapa";
+        const state = "Andhra Pradesh";
+        const country = "India";
+        console.log(sity.concat(", ", state, ", ", country));
+
+
+
+
+
+        //9. Trim()
+        let stuname = "   UmaKanth   ";
+        console.log("Trim:", stuname.trim());
+
+        var product = "   Laptop   ";
+        console.log("Product Name:", product.trim());
+
+        const rollNo = "   231   ";
+        console.log("Roll Number:", rollNo.trim());
+
+
+
+
+
+        //10. TrimStart()
+        let studentName = "     Umakanth";
+        console.log(studentName.trimStart());
+
+        var email = "          kanth@gmail.com";
+        console.log(email.trimStart());
+
+        const number = "          7995406905";
+        console.log(number.trimStart());
+
+
+
+
+
+        //11. TrimEnd()
+        let employee = "UmaKanth      ";
+        console.log("Employee Name:", employee.trimEnd());
+
+        var test = "JavaScript Training      ";
+        console.log("New Length:", test.trimEnd());
+
+        const item = "Laptop      ";
+        console.log("Product:", item.trimEnd());
+
+
+
+
+
+        //12. CharAt()
+        let str = "JavaScript";
+        console.log(str.charAt(4));
+
+        var company = "oppty"
+        console.log(company.charAt(3));
+
+        const fruits = "mango";
+        console.log(fruits.charAt(2));
+
+
+
+
+
+        //13. ChatCodeAt()
+        let word = "Hello";
+        console.log(word[0], "ASCII Value:", + word.charCodeAt(0));
+
+        var nam = "Umakanth";
+        console.log(nam[0], "ASCII Value:", + nam.charCodeAt(0));
+
+        const tet = "JavaScript";
+        console.log(tet[4], "ASCII Value:", + tet.charCodeAt(4));
+
+
+
+
+
+        //14. split()
+        let fru = "Apple,Mango,Banana,Orange";
+        console.log("fruits:", fru.split(","));
+
+        var name = "UMAKANTH";
+        console.log("characters: ", name.split(""));
+
+        const sen = "JavaScript is easy to learn";
+        console.log("words: ", sen.split(" "));
+
+
+
+
+
+        //15. Indexof()
+        let sent = "JavaScript is easy to learn";
+        console.log("Position:", sent.indexOf("e"));
+
+        var texts = "Programming";
+        console.log("Index of m:", texts.indexOf("m"));
+
+        const letsentence = "I am learning JavaScript today";
+        console.log("Index of S:", letsentence.indexOf("S"));
+    </script>
+</body>
+
+</html>
