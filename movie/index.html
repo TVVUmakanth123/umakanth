@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Ticket Pricing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Movie Ticket Pricing</h1>
+    <div class="group">
+      <label for="age">Age</label>
+      <input type="number" id="age" placeholder="Enter your age" />
+    </div>
+    <div class="group">
+      <label for="showtime">Showtime</label>
+      <select id="showtime">
+        <option value="matinee">Matinee</option>
+        <option value="evening">Evening</option>
+      </select>
+    </div>
+    <button onclick="calculatePrice()">Calculate Price</button>
+    <div class="result" id="result"></div>
+  </div>
+  <script>
+    function calculatePrice() {
+      let age = parseInt(document.getElementById("age").value);
+      let showtime = document.getElementById("showtime").value;
+      let result = document.getElementById("result");
+      if (isNaN(age) || age < 0) {
+        result.innerHTML = "Please enter a valid age.";
+      } else if (age < 12) {
+        result.innerHTML = "Ticket Type: Child Discount<br>Price: 5";
+      } else if (age >= 65) {
+        result.innerHTML = "Ticket Type: Senior Discount<br>Price: 7";
+      } else if (showtime === "matinee") {
+        result.innerHTML = "Ticket Type: Standard Adult Matinee<br>Price: 10";
+      } else {
+        result.innerHTML = "Ticket Type: Standard Adult Evening<br>Price: 15";
+      }
+      result.style.display = "block";
+    }
+  </script>
+</body>
+</html>
