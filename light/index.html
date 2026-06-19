@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="Text">THE LIGHT</h1>
+        <div id="Light" class="bulb"></div>
+        <button class="on-btn" onclick="switchLight('ON')">switch ON</button>
+        <button class="off-btn" onclick="switchLight('OFF')">switch OFF</button>
+    </div>
+    <script>
+        function switchLight(action){
+            const bulbElement = document.getElementById("Light");
+            const TextElement = document.getElementById("Text");
+            if(action === "ON"){
+                bulbElement.style.backgroundColor = "#f1c40f";
+                TextElement.innerHTML = "THE LIGHT IS ON";
+            }
+            else{
+                bulbElement.style.backgroundColor = "#7f8c8d";
+                TextElement.innerHTML = "THE LIGHT IS OFF";
+            }
+        }
+    </script>
+</body>
+</html>

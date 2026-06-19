@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="light.css">
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-img">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" alt="Profile">
+        </div>
+
+        <h2>Sarah Jensen</h2>
+        <p>@sarah_j</p>
+
+        <button id="followBtn" onclick="toggleFollow()">
+            Follow
+        </button>
+    </div>
+
+    <script>
+    function toggleFollow() {
+
+    let btn = document.getElementById("followBtn");
+
+    if(btn.innerHTML === "Follow"){
+        btn.innerHTML = "Following";
+        btn.style.backgroundColor = "#28a745";
+    }
+    else{
+        btn.innerHTML = "Follow";
+        btn.style.backgroundColor = "#0d6efd";
+    }
+
+}</script>
+
+</body>
+</html>
