@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> Pizza Builder</h1>
+    <label>Crust</label>
+    <select id="crust">
+        <option value="8">Thin - Rs.8</option>
+        <option value="10">Regular - Rs.10</option>
+        <option value="12">Stuffed - Rs.12</option>
+    </select>
+    <h3>Size</h3>
+    <input type="radio" name="size" value="1" checked> Small
+    <input type="radio" name="size" value="1.2"> Medium
+    <input type="radio" name="size" value="1.5"> Large
+    <h3>Toppings</h3>
+    <input type="checkbox" value="1"> Cheese <br>
+    <input type="checkbox" value="2"> Mushroom <br>
+    <input type="checkbox" value="2"> Chicken <br>
+    <br>
+    <button onclick="bill()">Calculate Bill</button>
+    <h2>Total : Rs. <span id="total">0</span></h2>
+    <script>
+        function bill() {
+            let crust = Number(document.getElementById("crust").value);
+            let size = document.querySelector("input[name='size']:checked").value;
+            let total = crust * size;
+            let toppings = document.querySelectorAll("input[type='checkbox']");
+            toppings.forEach(function (item) {
+                if (item.checked) {
+                    total = total + Number(item.value);
+                }
+            });
+            total = total - (total * 10 / 100);
+            document.getElementById("total").innerHTML = total.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

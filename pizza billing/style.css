@@ -1,0 +1,33 @@
+body {
+    font-family: Arial;
+    width: 400px;
+    margin: auto;
+    background: wheat;
+}
+
+h1 {
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+button {
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
