@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pizza Builder</title>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>BUILD YOUR SMART PIZZA</h1>
+
+            <h3>CRUST</h3>
+            <select id="crust" onchange="calculateTotal()">
+                <option value="8">Thin - Rs.8.00</option>
+                <option value="10">Regular - Rs.10.00</option>
+                <option value="12">Stuffed - Rs.12.00</option>
+            </select>
+
+            <h3>SIZE</h3>
+            <div class="sizes">
+                <button onclick="selectSize('Small',0)">Small</button>
+                <button onclick="selectSize('Medium',2)">Medium</button>
+                <button onclick="selectSize('Large',4)">Large</button>
+            </div>
+
+            <h3>TOPPINGS</h3>
+
+            <label>
+                <input type="checkbox" value="1.5" onchange="calculateTotal()">
+                Cheese
+            </label>
+
+            <label>
+                <input type="checkbox" value="2" onchange="calculateTotal()">
+                Mushrooms
+            </label>
+
+            <label>
+                <input type="checkbox" value="1" onchange="calculateTotal()">
+                Peppers
+            </label>
+
+            <label>
+                <input type="checkbox" value="2.5" onchange="calculateTotal()">
+                Pepperoni
+            </label>
+
+            <label>
+                <input type="checkbox" value="3" onchange="calculateTotal()">
+                Chicken
+            </label>
+
+        </div>
+
+        <div class="right">
+            <h1>YOUR RECEIPT</h1>
+            <div class="receipt">
+                <h2 id="pizzaName">THIN CRUST PIZZA</h2>
+                <p>Base: $<span id="base">8.00</span></p>
+                <p>Toppings: $<span id="toppings">0.00</span></p>
+                <hr>
+                <p>Subtotal: $<span id="subtotal">8.00</span></p>
+                <p>Discount: 10%</p>
+                <hr>
+                <h1>Total: $<span id="total">7.20</span></h1>
+                <button>PLACE ORDER</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let sizePrice = 0;
+        let sizeName = "Small";
+        function selectSize(size, price) {
+            sizeName = size;
+            sizePrice = price;
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            let crust = document.getElementById("crust");
+            let basePrice = Number(crust.value);
+            let toppingTotal = 0;
+            let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    toppingTotal = toppingTotal + Number(checkboxes[i].value);
+                }
+            }
+            let subtotal = basePrice + sizePrice + toppingTotal;
+            let discount = subtotal * 0.10;
+            let finalTotal = subtotal - discount;
+            document.getElementById("base").innerHTML = basePrice + sizePrice;
+            document.getElementById("toppings").innerHTML = toppingTotal;
+            document.getElementById("subtotal").innerHTML = subtotal;
+            document.getElementById("total").innerHTML = finalTotal;
+        }
+        calculateTotal();
+    </script>
+</body>
+
+</html>
