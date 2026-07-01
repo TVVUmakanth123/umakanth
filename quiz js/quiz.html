@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz App</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="home-page" id="homePage">
+        <div class="home-card">
+            <div class="home-icon">
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <h1>
+                Welcome to JavaScript <br>
+                Quiz!
+            </h1>
+            <p>
+                Test your JavaScript knowledge with
+                10 multiple choice questions.
+            </p>
+            <div class="home-info">
+                <div class="info-box">
+                    <i class="fa-solid fa-list"></i>
+                    <h3>10</h3>
+                    <span>Questions</span>
+                </div>
+                <div class="info-box">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3>Multiple</h3>
+                    <span>Choice</span>
+                </div>
+                <div class="info-box">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3>Test Your</h3>
+                    <span>Knowledge</span>
+                </div>
+            </div>
+            <button id="startBtn">
+                Start Quiz
+            </button>
+        </div>
+    </section>
+    <section class="quiz-page hide" id="quizPage">
+        <div class="quiz-card">
+            <div class="question-count">
+                Question
+                <span id="currentQuestion">1</span>
+                of
+                <span id="totalQuestion">10</span>
+            </div>
+            <div class="progress-area">
+                <div class="progress-bar" id="progressBar">
+                </div>
+            </div>
+            <div class="question-box">
+                <h2 id="questionText">
+                    Question goes here
+                </h2>
+                <div class="option-list" id="optionList">
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="prevBtn" class="previous-btn">
+                    Previous
+                </button>
+                <button id="nextBtn" class="next-btn">
+                    Next
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="result-page hide" id="resultPage">
+        <div class="result-card">
+            <div class="result-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h1>
+                Quiz Completed!
+            </h1>
+            <p>
+                Great job! Here are your results.
+            </p>
+            <div class="circle-score">
+                <div class="circle">
+                    <div class="inside-circle">
+                        <h2 id="percentage">
+                            80%
+                        </h2>
+                        <span>
+                            Your Score
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="result-boxes">
+                <div class="result-box correct">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2 id="correctAnswer">
+                        8
+                    </h2>
+                    <p>Correct</p>
+                </div>
+                <div class="result-box wrong">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <h2 id="wrongAnswer">
+                        2
+                    </h2>
+                    <p>Wrong</p>
+                </div>
+                <div class="result-box total">
+                    <i class="fa-solid fa-list"></i>
+                    <h2 id="totalAnswer">
+                        10
+                    </h2>
+                    <p>Total</p>
+                </div>
+            </div>
+            <button id="restartBtn">
+                Restart Quiz
+            </button>
+        </div>
+    </section>
+
+    <script>
+        const quizQuestions = [
+            {
+                question: "Which keyword is used to declare a variable in JavaScript?",
+                options: ["int", "let", "float", "define"],
+                answer: 1
+            },
+
+            {
+                question: "Which company developed JavaScript?",
+                options: ["Google", "Microsoft", "Netscape", "Oracle"],
+                answer: 2
+            },
+
+            {
+                question: "Which symbol is used for single line comments?",
+                options: [ "<__ __>", "//", "/* */", "#"],
+                answer: 1
+            },
+
+            {
+                question: "Which method displays a popup alert?",
+                options: ["alert()", "prompt()", "confirm()", "console.log()" ],
+                answer: 0
+            },
+
+            {
+                question: "Which operator is used for strict equality?",
+                options: ["==", "=", "===", "!="],
+                answer: 2
+            },
+
+            {
+                question: "Which loop repeats until the condition becomes false?",
+                options: ["for", "while", "switch", "break"],
+                answer: 1
+            },
+
+            {
+                question: "Which method prints data in the browser console?",
+                options: ["document.write()", "console.log()", "print()", "alert()"],
+                answer: 1
+            },
+
+            {
+                question: "What is the output type of typeof 100?",
+                options: ["integer", "number", "float", "string"],
+                answer: 1
+            },
+
+            {
+                question: "Which function converts JSON into a JavaScript object?",
+                options: ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "parseJSON()"],
+                answer: 0
+            },
+
+            {
+                question: "Which event occurs when a button is clicked?",
+                options: ["onhover", "onclick", "onchange", "onload"],
+                answer: 1
+            }
+
+        ];
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswers = new Array(quizQuestions.length).fill(null);
+        const homePage = document.getElementById("homePage");
+        const quizPage = document.getElementById("quizPage");
+        const resultPage = document.getElementById("resultPage");
+        const startBtn = document.getElementById("startBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("prevBtn");
+        const restartBtn = document.getElementById("restartBtn");
+        const questionText = document.getElementById("questionText");
+        const optionList = document.getElementById("optionList");
+        const progressBar = document.getElementById("progressBar");
+        const currentQuestionText = document.getElementById("currentQuestion");
+        const totalQuestion = document.getElementById("totalQuestion");
+        const percentage = document.getElementById("percentage");
+        const correctAnswer = document.getElementById("correctAnswer");
+        const wrongAnswer = document.getElementById("wrongAnswer");
+        const totalAnswer = document.getElementById("totalAnswer");
+        totalQuestion.innerHTML = quizQuestions.length;
+        startBtn.addEventListener("click", function () {
+            homePage.classList.add("hide");
+            quizPage.classList.remove("hide");
+            loadQuestion();
+        });
+        function loadQuestion() {
+            const question = quizQuestions[currentQuestion];
+            currentQuestionText.innerHTML = currentQuestion + 1;
+            questionText.innerHTML = question.question;
+            optionList.innerHTML = "";
+            let progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
+            progressBar.style.width = progress + "%";
+            prevBtn.disabled = currentQuestion === 0;
+            if (currentQuestion === quizQuestions.length - 1) {
+                nextBtn.innerHTML = "Submit";
+            } else {
+                nextBtn.innerHTML = "Next";
+            }
+            question.options.forEach(function (option, index) {
+                const optionDiv = document.createElement("div");
+                optionDiv.className = "option";
+                if (selectedAnswers[currentQuestion] === index) {
+                    optionDiv.classList.add("active");
+                }
+                optionDiv.innerHTML = `<input type="radio" name="answer" id="option${index}"
+                ${selectedAnswers[currentQuestion] === index ? "checked" : ""}>
+                <label for="option${index}">${option}</label>`;
+                optionDiv.addEventListener("click", function () {
+                    document.querySelectorAll(".option")
+                        .forEach(function (item) { item.classList.remove("active"); });
+                    optionDiv.classList.add("active");
+                    optionDiv.querySelector("input").checked = true;
+                    selectedAnswers[currentQuestion] = index;
+                });
+                optionList.appendChild(optionDiv);
+            });
+        }
+        function calculateScore() {
+            score = 0;
+            selectedAnswers.forEach(function (answer, index) {
+                if (answer === quizQuestions[index].answer) {
+                    score++;
+                }
+            });
+        }
+        prevBtn.addEventListener("click", function () {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        });
+        nextBtn.addEventListener("click", function () {
+            if (selectedAnswers[currentQuestion] === null) {
+                alert("Please select an answer.");
+                return;
+            }
+            if (currentQuestion === quizQuestions.length - 1) {
+                showResult();
+            }
+            else {
+                currentQuestion++;
+                loadQuestion();
+            }
+        });
+        function showResult() {
+            calculateScore();
+            quizPage.classList.add("hide");
+            resultPage.classList.remove("hide");
+            let wrong = quizQuestions.length - score;
+            let percent = Math.round((score / quizQuestions.length) * 100);
+            percentage.innerHTML = percent + "%";
+            correctAnswer.innerHTML = score;
+            wrongAnswer.innerHTML = wrong;
+            totalAnswer.innerHTML = quizQuestions.length;
+            const circle = document.querySelector(".circle");
+            let degree = percent * 3.6;
+        }
+        restartBtn.addEventListener("click", function () {
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswers = new Array(quizQuestions.length).fill(null);
+            resultPage.classList.add("hide");
+            homePage.classList.remove("hide");
+            progressBar.style.width = "10%";
+        });
+        document.addEventListener("keydown", function (event) {
+            if (quizPage.classList.contains("hide")) {
+                return;
+            }
+            if (event.key === "ArrowRight") {
+                nextBtn.click();
+            }
+            if (event.key === "ArrowLeft") {
+                prevBtn.click();
+            }
+        });
+        homePage.classList.remove("hide");
+        quizPage.classList.add("hide");
+        resultPage.classList.add("hide");
+    </script>
+
+</body>
+
+</html>
