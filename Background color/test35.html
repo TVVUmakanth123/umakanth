@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Welcome To JavaScript</h1>
+    <button onclick="changeBgColor()">Change BGColor</button>
+
+    <script>
+        function changeBgColor() {
+            let Bgcolors = ["red", "blue", "green", "yellow", "pink", "orange", "purple"];
+            let randomIndex = Math.floor(Math.random() * Bgcolors.length);
+            document.body.style.backgroundColor = Bgcolors[randomIndex];
+        }
+    </script>
+
+</body>
+
+</html>

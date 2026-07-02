@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test34.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainHeading">Welcome to JavaScript!</h1>
+        <p id="description">Click the buttons below to see JavaScript in action.</p>
+        <button onclick="changeHeading()">Change Heading</button>
+        <button onclick="changeColor()">Change Color</button>
+        <button onclick="changeBackground()">Change Background</button>
+        <button onclick="showDate()">Show Date</button>
+        <button onclick="resetAll()">Reset</button>
+    </div>
+    
+    <script>
+        function changeHeading() {
+            document.getElementById("mainHeading").innerHTML = "JavaScript is Amazing!";
+        }
+        
+        function changeColor() {
+            let colors = ['red', 'blue', 'green', 'orange', 'purple'];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("mainHeading").style.color = randomColor;
+        }
+
+        function changeBackground() {
+            let bgcolors = ["red", "blue", "green", "yellow", "pink", "orange", "purple"];
+            let randomBgColor = bgcolors[Math.floor(Math.random() * bgcolors.length)];
+            document.body.style.backgroundColor = randomBgColor;
+        }
+        
+        function showDate() {
+            document.getElementById("description").innerHTML = "Current date and time: " + new Date();
+        }
+        
+        function resetAll() {
+            document.getElementById("mainHeading").innerHTML = "Welcome to JavaScript!";
+            document.getElementById("mainHeading").style.color = "black";
+            document.body.style.backgroundColor = "white";
+            document.getElementById("description").innerHTML = "Click the buttons below to see JavaScript in action.";
+        }
+    </script>
+</body>
+</html>
