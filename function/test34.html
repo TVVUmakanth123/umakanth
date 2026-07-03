@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nameInput">
+    <button onclick="runGreet()">Run</button>
+    <div id="greetOutput"></div>
+
+    <script>
+        function greetUser(name) {
+            if (!name) return "Please enter a name first!";
+            return "Hello, " + name + "!";
+        }
+
+        function runGreet() {
+            const inputVal = document.getElementById('nameInput').value;
+            const result = greetUser(inputVal);
+            document.getElementById('greetOutput').innerText = result;
+        }
+    </script>
+
+
+
+
+
+    <h2>Function with One Parameter</h2>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="showMessage()">Submit</button>
+    <h3 id="result"></h3>
+
+    <script>
+        function greet(name) {
+            document.getElementById("result").innerHTML = "Welcome, " + name + "!";
+        }
+        function showMessage() {
+            let username = document.getElementById("name").value;
+            greet(username);
+        }
+    </script>
+
+
+
+
+
+
+    <h2>Square of a Number</h2>
+    <input type="number" id="num">
+    <button onclick="calculate()">Find Square</button>
+    <p id="answer"></p>
+
+    <script>
+        function square(number) {
+            document.getElementById("answer").innerHTML = "Square = " + (number * number);
+        }
+        function calculate() {
+            let value = document.getElementById("num").value;
+            square(value);
+        }
+    </script>
+
+</body>
+
+
+</html>

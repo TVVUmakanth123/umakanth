@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Add/Mul Two Numbers</h2>
+    <input type="number" id="num1">
+    <select id="operator">
+        <option value="add">+</option>
+        <option value="multiply">*</option>
+    </select>
+    <input type="number" id="num2">
+    <button onclick="runCal()">Calculate</button>
+    <div id="output"></div>
+
+    <script>
+        function cal(num1, num2, operator) {
+            if (operator === 'add') return num1 + num2;
+            if (operator === 'multiply') return num1 * num2;
+            return 0;
+        }
+        function runCal() {
+            const val1 = Number(document.getElementById('num1').value);
+            const val2 = Number(document.getElementById('num2').value);
+            const op = document.getElementById('operator').value;
+            const res = cal(val1, val2, op);
+            document.getElementById('output').innerText = "Result: " + res;
+        }
+    </script>
+
+
+
+
+
+
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="number1" placeholder="Enter First Number">
+    <input type="number" id="number2" placeholder="Enter Second Number">
+    <button onclick="calculate()">Add</button>
+    <h3 id="result"></h3>
+    <script>
+        function add(a, b) {
+            document.getElementById("result").innerHTML = "Sum = " + (a + b);
+        }
+        function calculate() {
+            let first = Number(document.getElementById("number1").value);
+            let second = Number(document.getElementById("number2").value);
+            add(first, second);
+        }
+    </script>
+
+
+
+
+
+    <h2>Student Details</h2>
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="age" placeholder="Enter Age">
+    <button onclick="show()">Show Details</button>
+    <p id="Output"></p>
+    <script>
+        function student(name, age) {
+            document.getElementById("Output").innerHTML =
+                "Name: " + name + "<br>Age: " + age;
+        }
+        function show() {
+            let studentName = document.getElementById("name").value;
+            let studentAge = document.getElementById("age").value;
+            student(studentName, studentAge);
+        }
+    </script>
+
+</body>
+
+</html>
