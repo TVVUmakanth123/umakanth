@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Mapping App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mapping App</h1>
+        <div class="search-box">
+            <input type="text" id="location" placeholder="Enter city or place">
+            <button onclick="searchLocation()">
+                Search
+            </button>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map("map").setView([20.5937, 78.9629], 5);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: "© OpenStreetMap"
+        }).addTo(map);
+        var marker = L.marker([20.5937, 78.9629]).addTo(map);
+        marker.bindPopup("India").openPopup();
+        async function searchLocation() {
+            var place = document.getElementById("location").value;
+            if (place == "") {
+                alert("Please enter a location");
+                return;
+            }
+            try {
+                var response = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + place);
+                if (!response.ok) {
+                    throw new Error("Network Error");
+                }
+                var data = await response.json();
+                if (data.length == 0) {
+                    throw new Error("Location not found");
+                }
+                var lat = data[0].lat;
+                var lon = data[0].lon;
+                map.setView([lat, lon], 13);
+                marker.setLatLng([lat, lon]);
+                marker.bindPopup(place).openPopup();
+            }
+            catch (error) {
+                alert(error.message);
+            }
+            finally {
+                console.log("Search Completed");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
