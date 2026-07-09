@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test35.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mapping App</h1>
+        <input type="text" id="location" placeholder="Enter Location">
+        <button onclick="findLocation()">
+            Search
+        </button>
+        <div id="map"></div>
+    </div>
+    <script>
+        let map;
+        let geocoder;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 17.3850, lng: 78.4867 }, zoom: 8
+            });
+            geocoder = new google.maps.Geocoder();
+        }
+        function findLocation() {
+            let place = document.getElementById("location").value;
+            if (place == "") {
+                alert("Enter Location");
+                return;
+            }
+            geocoder.geocode(
+                {
+                    address: place
+                },
+                function (results, status) {
+                    if (status == "OK") {
+                        map.setCenter(results[0].geometry.location);
+                        new google.maps.Marker({
+                            map: map, position: results[0].geometry.location
+                        });
+                    }
+                    else {
+                        alert("Location Not Found");
+                    }
+                }
+            );
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=Vz0fa59HehpuMEdClUPE&callback=initMap" async>
+    </script>
+</body>
+
+</html>

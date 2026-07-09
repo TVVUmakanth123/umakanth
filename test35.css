@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f4f4;
+    font-family:Arial;
+}
+
+.container{
+    width:80%;
+    margin:30px auto;
+    text-align:center;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+input{
+    width:300px;
+    padding:10px;
+    font-size:18px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+    cursor:pointer;
+    background:blue;
+    color:white;
+    border:none;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+#map{
+    width:100%;
+    height:500px;
+    margin-top:20px;
+    border:2px solid black;
+}
