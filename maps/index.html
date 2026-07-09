@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping App</title>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Map Searching</h1>
+        <input type="text" id="place" placeholder="Enter city or country Name">
+        <button onclick="searchLocation()">
+            Search
+        </button>
+        <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+
+    <script>
+        const apiKey = "Vz0fa59HehpuMEdClUPE";
+        const map = new maplibregl.Map({
+            container: "map",
+            style: `https://api.maptiler.com/maps/streets/style.json?key=${apiKey}`,
+            center: [78.4867, 17.3850],
+            zoom: 4
+        });
+        map.addControl(new maplibregl.NavigationControl());
+        let marker = new maplibregl.Marker();
+        async function searchLocation() {
+            const place = document.getElementById("place").value;
+            if (place === "") {
+                alert("Please enter a city or country");
+                return;
+            }
+            const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(place)}.json?key=${apiKey}`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                if (data.features.length === 0) {
+                    alert("Location not found");
+                    return;
+                }
+                const lng = data.features[0].center[0];
+                const lat = data.features[0].center[1];
+                map.flyTo({
+                    center: [lng, lat],
+                    zoom: 10
+                });
+                marker.setLngLat([lng, lat]).addTo(map);
+            }
+            catch (error) {
+                console.log(error);
+                alert("Something went wrong!");
+            }
+        }
+    </script>
+</body>
+
+</html>
