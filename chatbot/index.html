@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <h2>Umakanth AI Chatbot</h2>
+        <div id="chatBox" class="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+        const API_KEY = "AQ.Ab8RN6IH14OLRP-7pzBqxo4m9DF5MDjNqY8ZoPXIwmr6-XKRxQ";
+        const chatBox = document.getElementById("chatBox");
+        function addMessage(text, type) {
+            const div = document.createElement("div");
+            div.className = type;
+            div.innerHTML = "<span>" + text + "</span>";
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+        async function sendMessage() {
+            const input = document.getElementById("userInput");
+            const message = input.value.trim();
+            if (message == "") return;
+            addMessage(message, "user");
+            input.value = "";
+            addMessage("Typing...", "bot");
+            try {
+                const response = await fetch(
+                    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + API_KEY,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            contents: [
+                                {
+                                    parts: [
+                                        {
+                                            text: message
+                                        }
+                                    ]
+                                }
+                            ]
+                        })
+                    });
+                const data = await response.json();
+                chatBox.removeChild(chatBox.lastChild);
+                let reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response.";
+                addMessage(reply, "bot");
+            }
+            catch (error) {
+                chatBox.removeChild(chatBox.lastChild);
+                addMessage("Error : " + error.message, "bot");
+            }
+        }
+        document
+            .getElementById("userInput")
+            .addEventListener("keypress", function (e) {
+                if (e.key === "Enter") {
+                    sendMessage();
+                }
+            });
+    </script>
+
+</body>
+
+</html>
