@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: #4a90e2;
+    }
+
+    .container {
+        width: 450px;
+        background: white;
+        margin: 60px auto;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .search-box {
+        display: flex;
+        gap: 10px;
+    }
+
+    input {
+        flex: 1;
+        padding: 10px;
+        font-size: 18px;
+        border: 2px solid #4a90e2;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        background: #4a90e2;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #2563eb;
+    }
+
+    #result {
+        margin-top: 25px;
+    }
+
+    .word {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .part {
+        color: #666;
+        margin-top: 5px;
+    }
+
+    .meaning {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .example {
+        margin-top: 15px;
+        color: #555;
+        font-style: italic;
+    }
+
+    .audio {
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>📖 Dictionary App</h1>
+
+        <div class="search-box">
+            <input type="text" id="word" placeholder="Enter a word">
+            <button onclick="searchWord()">Search</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        async function searchWord() {
+
+            let word = document.getElementById("word").value.trim();
+            let result = document.getElementById("result");
+
+            if (word == "") {
+                result.innerHTML = "<h3>Please enter a word.</h3>";
+                return;
+            }
+
+            let url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word;
+
+            try {
+
+                let response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error("Word not found");
+                }
+
+                let data = await response.json();
+
+                let item = data[0];
+
+                let meaning = item.meanings[0].definitions[0].definition;
+
+                let example = item.meanings[0].definitions[0].example || "No example available.";
+
+                let part = item.meanings[0].partOfSpeech;
+
+                let audio = "";
+
+                for (let i = 0; i < item.phonetics.length; i++) {
+
+                    if (item.phonetics[i].audio != "") {
+                        audio = item.phonetics[i].audio;
+                        break;
+                    }
+
+                }
+
+                result.innerHTML = `
+            <div class="word">${item.word}</div>
+
+            <div class="part">${part}</div>
+
+            <div class="meaning">
+                <b>Meaning:</b><br>
+                ${meaning}
+            </div>
+
+            <div class="example">
+                <b>Example:</b><br>
+                ${example}
+            </div>
+
+            <div class="audio">
+                <audio controls src="${audio}"></audio>
+            </div>
+        `;
+
+            }
+
+            catch (error) {
+
+                result.innerHTML = "<h3>Word not found.</h3>";
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
